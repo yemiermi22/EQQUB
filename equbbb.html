@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+   <style>
+   
+        .container{
+          
+        padding-bottom: 50px;
+        }
+        .card{
+          margin: 20px;
+          background-color: darkgray;
+          border-radius: 15px;
+        }
+        .namee{
+          text-align: center;
+        }
+        .list{
+          margin: 30px;
+          border-radius: 10px;
+          border-style: double;
+          border-color: black;
+          background-color: darkgray;
+        }
+        h2{
+          color: #000;
+       }
+        
+    </style>
+ 
+  </head>
+  <body onload="myload()" class="b" id="cam">
+   
+      
+    <div class="container">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 "style="background-color: darkgray;">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4 text-white">Equb Online Form</span> 
+          </a>
+    
+          
+          </header>
+        </div>
+
+
+
+
+
+      <div class="card1">
+     <div class="row">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <h2 class="list">form of name in Equb</h2>
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-3 row">
+                <label for="text" class="col-sm-3 col-form-label" placeholder="firstName">firstName</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="firstName">
+                </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">LastName</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="LastName">
+                </div>
+              </div>
+              
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Phone Number</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="LastName">
+                </div>
+              </div>
+
+
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Amount</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="amount">
+                </div>
+              </div>
+
+              <button onclick="fn1()" class="btn-primary" type="button"  id="btn1">Register</button>
+            </div>
+          </div>
+        </div>
+
+
+<div class="col-sm-6">
+          <h2 class="list">list Member of Equb</h2>
+          <div class="card">
+          <table class="table" id="tbb">
+           
+      
+          
+          
+              <tr>
+               
+                <td  scope="col">First</td>
+                <td scope="col">Last</td>
+                <td input name="coll" type="number" class="ALG" scope="col" id="ftotal">price</td>
+              </tr>
+       
+          </table>
+       
+</div>
+
+          <div>
+            <button onclick="gen()" class="btn btn-primary"> Generate </button>
+          </div>
+        </div>
+            </div>
+
+        
+
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+
+      var lengthEqub = 0;
+      var sum = 0;
+      var nameOfUser = new Array();
+      
+      
+      function fn1(){
+             var  username= document.getElementById("firstName").value;
+             var  LastName= document.getElementById("LastName").value;
+             var  amount= document.getElementById("amount").value;
+              
+             
+             const table = document.getElementById("tbb");
+             var row=table.insertRow();
+             var cell=row.insertCell(0);
+             var cell1=row.insertCell(1);
+             var cell2=row.insertCell(2);
+      
+             cell.innerHTML = username;
+             cell1.innerHTML = LastName;
+             cell2.innerHTML = amount;   
+             
+             sum+= Number(amount);
+             nameOfUser.push(username + " " + LastName);
+             lengthEqub++;
+      
+      }
+      
+
+      
+      function gen() {
+                  var ran = Math.floor(Math.random() * lengthEqub);
+                  
+                //   for(x=1;x<=10;x++)
+                //   {
+                //     amountt=amountt+x
+                //   }
+                //  console.log(amountt) 
+        //         i+=Number(amount);
+
+        //      var  amount= document.getElementById("ftotal").value;
+        // document.getElementById("").value = i;
+        // var sum = 0;
+        
+        var winnerName = nameOfUser[ran];
+     alert("In this round the winner is  :   "+ winnerName + " " + sum );
+              
+      
+      }
+      
+          </script>
+  </body>
+</html>
